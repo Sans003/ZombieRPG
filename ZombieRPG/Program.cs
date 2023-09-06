@@ -14,7 +14,6 @@ namespace ZombieRPG
         public int posX;
         public int posY;
         public const string symbols = $"O┼^";
-        static Random rng = new Random();
         public static void Main(string[] args)
         {
             Console.CursorVisible = false;
@@ -25,7 +24,6 @@ namespace ZombieRPG
 
             while (true)
             {
-                playerchar.Render();
                 if (Console.KeyAvailable)
                 {
                     var command = Console.ReadKey().Key;
@@ -50,43 +48,151 @@ namespace ZombieRPG
                     playerchar.DeRender();
                     playerchar.Render();
                 }
-                else
-                {
-                    Thread.Sleep(100);
-                }
+                Spawner spawn = new Spawner();
+                spawn.spawning();
+                playerchar.Render();
+                Thread.Sleep(100);
             }
         }
+    }
+    public class Spawner
+    {
+        public void spawning()
+        {
+            Entities giant = new Entities();
+            giant.spawnEntity("giant");
+            Entities qbitch = new Entities();
+            qbitch.spawnEntity("qBitch");
+            Entities athole = new Entities();
+            athole.spawnEntity("atHole");
+            Entities chest = new Entities();
+            chest.spawnEntity("chest");
+            Entities spider = new Entities();
+            spider.spawnEntity("spider");
+        }
+    }
+    public class Entities
+    {
+        public List<int> bitchId = new List<int>();
+        public List<int> holeId = new List<int>();
+        public List<int> spiderId = new List<int>();
+        public List<int> chestId = new List<int>();
+        public List<int> giantId = new List<int>();
+        static Random rng = new Random();
+
+        public void spawnEntity(string entity)
+        {
+            int w = Console.WindowWidth-2;
+            int h = Console.WindowHeight-3;
+            int x = rng.Next(w);
+            int y = rng.Next(h);
+            int id = 1;
+            if (entity == "giant")
+            {
+                if (giantId != null)
+                {
+                    id = giantId.Count() + 1;
+                    giantId.Append(id);
+                }
+                string entitiyName = $"giant{id}";
+                Giant entityname = new Giant();
+                entityname.posX = x; entityname.posY = y;
+                entityname.oPosX = entityname.posX; entityname.oPosY = entityname.posY;
+                entityname.symbols = "0││^";
+                entityname.Render();
+            }
+            else if (entity == "spider")
+            {
+                if (spiderId != null)
+                {
+                    id = spiderId.Count() + 1;
+                    spiderId.Append(id);
+                }
+                string entitiyName = $"spider{id}";
+                Spider entityname = new Spider();
+                entityname.posX = x; entityname.posY = y;
+                entityname.oPosX = entityname.posX; entityname.oPosY = entityname.posY;
+                entityname.symbols = ";m;";
+                entityname.Render();
+
+            }
+            else if (entity == "qBitch")
+            {
+                if (bitchId != null)
+                {
+                    id = bitchId.Count() + 1;
+                    bitchId.Append(id);
+                }
+                string entitiyName = $"bitch{id}";
+                Humanoid entityname = new Humanoid();
+                entityname.posX = x; entityname.posY = y;
+                entityname.oPosX = entityname.posX; entityname.oPosY = entityname.posY;
+                entityname.symbols = "Q┼^";
+                entityname.Render();
+
+            }
+            else if (entity == "atHole")
+            {
+                if (holeId != null)
+                {
+                    id = holeId.Count() + 1;
+                    holeId.Append(id);
+                }
+                string entitiyName = $"athole{id}";
+                Humanoid entityname = new Humanoid();
+                entityname.posX = x; entityname.posY = y;
+                entityname.oPosX = entityname.posX; entityname.oPosY = entityname.posY;
+                entityname.symbols = "@┼^";
+                entityname.Render();
+
+            }
+            else if (entity == "chest")
+            {
+                if (chestId != null)
+                {
+                    id = chestId.Count() + 1;
+                    chestId.Append(id);
+                }
+                string entitiyName = $"chest{id}";
+                Chest entityname = new Chest();
+                entityname.posX = x; entityname.posY = y;
+                entityname.oPosX = entityname.posX; entityname.oPosY = entityname.posY;
+                entityname.symbols = "┌─┐└─┘";
+                entityname.Render();
+
+            }
 
 
-
-        //public static bool IsDangerSpot(int x, int y)
-        //{
-        //    foreach (var spot in dangerSpots)
-        //    {
-        //        if (spot[0] == x && spot[1] == y)
-        //        {
-        //            return true;
-        //        }
-        //    }
-        //    return false;
-        //}
-
-
-        //public static void saveCoords(int x, int y)
-        //{
-        //    if (x >= 0 && x < Console.WindowWidth && y >= 0 && y < Console.WindowHeight)
-        //    {
-        //        List<int> coords = new List<int>
-        //        {
-        //            x,
-        //            y
-        //        };
-        //        dangerSpots.Add(coords);
-        //    }
-        //}
-
+        }
 
     }
+    //public static bool IsDangerSpot(int x, int y)
+    //{
+    //    foreach (var spot in dangerSpots)
+    //    {
+    //        if (spot[0] == x && spot[1] == y)
+    //        {
+    //            return true;
+    //        }
+    //    }
+    //    return false;
+    //}
+
+
+    //public static void saveCoords(int x, int y)
+    //{
+    //    if (x >= 0 && x < Console.WindowWidth && y >= 0 && y < Console.WindowHeight)
+    //    {
+    //        List<int> coords = new List<int>
+    //        {
+    //            x,
+    //            y
+    //        };
+    //        dangerSpots.Add(coords);
+    //    }
+    //}
+
+
     class Rendering
     {
         public int posX { get; set; }
@@ -176,9 +282,9 @@ namespace ZombieRPG
         {
             if (posX >= 0 && posY >= 0)
             {
-                foreach (char c in symbols.ToCharArray())
+                for (int c = 0; c < symbols.Length; c++)
                 {
-                    Console.SetCursorPosition(posX, posY + c);
+                    Console.SetCursorPosition(oPosX, oPosY + c);
                     Console.Write(' ');
                 }
             }

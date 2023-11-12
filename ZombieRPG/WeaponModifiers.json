@@ -1,0 +1,180 @@
+{
+  "sword": [
+    {
+      "name": "Light",
+      "weightModifier": -10,
+      "damageModifier": -5,
+      "durabilityModifier": 0,
+      "rof": 0
+    },
+    {
+      "name": "Heavy",
+      "weightModifier": 10,
+      "damageModifier": 5,
+      "durabilityModifier": 0,
+      "rof": 0
+    },
+    {
+      "name": "Sharp",
+      "damageModifier": 5,
+      "durabilityModifier": 0,
+      "weightModifier": 0,
+      "rof": 0
+    },
+    {
+      "name": "Blunt",
+      "damageModifier": -5,
+      "durabilityModifier": 0,
+      "weightModifier": 0,
+      "rof": 0
+    },
+    {
+      "name": "Deadly",
+      "damageModifier": 20,
+      "durabilityModifier": 0,
+      "weightModifier": 0,
+      "rof": 0
+    }
+  ],
+  "rifle": [
+    {
+      "name": "powerful",
+      "damageModifier": 10,
+      "durabilityModifier": 0,
+      "weightModifier": 5,
+      "rof": 0
+    },
+    {
+      "name": "silenced",
+      "damageModifier": -10,
+      "durabilityModifier": 0,
+      "weightModifier": 0,
+      "rof": 0
+    },
+    {
+      "name": "Damaged",
+      "durabilityModifier": -10,
+      "damageModifier": 0,
+      "weightModifier": 0,
+      "rof": 0
+    },
+    {
+      "name": "Durable",
+      "durabilityModifier": 10,
+      "damageModifier": 0,
+      "weightModifier": 0,
+      "rof": 0
+    },
+    {
+      "name": "Deadly",
+      "damageModifier": 20,
+      "durabilityModifier": 0,
+      "weightModifier": 10,
+      "rof": 0
+    },
+    {
+      "name": "Rapid-fire",
+      "damageModifier": -5,
+      "durabilityModifier": 0,
+      "weightModifier": 0,
+      "rof": 3
+    }
+  ],
+  "gun": [
+    {
+      "name": "Precise",
+      "damageModifier": 5,
+      "durabilityModifier": 0,
+      "weightModifier": 0,
+      "rof": 0
+    },
+    {
+      "name": "Rapid-fire",
+      "damageModifier": -5,
+      "durabilityModifier": 0,
+      "weightModifier": 0,
+      "rof": 3
+    },
+    {
+      "name": "Damaged",
+      "durabilityModifier": -10,
+      "damageModifier": 0,
+      "weightModifier": 0,
+      "rof": 0
+    },
+    {
+      "name": "Durable",
+      "durabilityModifier": 10,
+      "damageModifier": 0,
+      "weightModifier": 0,
+      "rof": 0
+    },
+    {
+      "name": "Deadly",
+      "damageModifier": 20,
+      "durabilityModifier": 0,
+      "weightModifier": 0,
+      "rof": 0
+    }
+  ],
+  "axe": [
+    {
+      "name": "Light",
+      "weightModifier": -10,
+      "damageModifier": 0,
+      "durabilityModifier": 0,
+      "rof": 0
+    },
+    {
+      "name": "Heavy",
+      "weightModifier": 10,
+      "damageModifier": 0,
+      "durabilityModifier": 0,
+      "rof": 0
+    },
+    {
+      "name": "Damaged",
+      "durabilityModifier": -10,
+      "damageModifier": 0,
+      "weightModifier": 0,
+      "rof": 0
+    },
+    {
+      "name": "Durable",
+      "durabilityModifier": 10,
+      "damageModifier": 0,
+      "weightModifier": 0,
+      "rof": 0
+    },
+    {
+      "name": "Deadly",
+      "damageModifier": 20,
+      "durabilityModifier": 0,
+      "weightModifier": 0,
+      "rof": 0
+    }
+  ],
+  "bow": [
+    {
+      "name": "Damaged",
+      "durabilityModifier": -10,
+      "damageModifier": 0,
+      "weightModifier": 0,
+      "rof": 0
+    },
+    {
+      "name": "Durable",
+      "durabilityModifier": 10,
+      "damageModifier": 0,
+      "weightModifier": 0,
+      "rof": 0
+    },
+    {
+      "name": "Deadly",
+      "damageModifier": 20,
+      "durabilityModifier": 0,
+      "weightModifier": 0,
+      "rof": 0
+    }
+  ]
+}

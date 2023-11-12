@@ -13,7 +13,7 @@
             int y = rng.Next(h);
             int id = 1;
 
-
+            Console.WriteLine("Spawn");
 
         }
 

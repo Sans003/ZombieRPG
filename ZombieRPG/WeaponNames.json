@@ -1,0 +1,116 @@
+{
+  "weapons": [
+    {
+      "name": "Sword",
+      "type": "Weapon",
+      "weight": "5",
+      "durability": "20",
+      "rof": "1",
+      "damage": "5"
+    },
+    {
+      "name": "Rifle",
+      "type": "Weapon",
+      "weight": "5",
+      "durability": "20",
+      "rof": "1",
+      "damage": "5"
+    },
+    {
+      "name": "Gun",
+      "type": "Weapon",
+      "weight": "3",
+      "durability": "10",
+      "rof": "1",
+      "damage": "2"
+    },
+    {
+      "name": "Axe",
+      "type": "Weapon",
+      "weight": "8",
+      "durability": "20",
+      "rof": "1",
+      "damage": "7"
+    },
+    {
+      "name": "Bow",
+      "type": "Weapon",
+      "weight": "3",
+      "durability": "10",
+      "rof": "1",
+      "damage": "3"
+    }
+  ],
+  "items": [
+    {
+      "name": "Arrows",
+      "type": "Equipment",
+      "weight": "0",
+      "maxamount":  12
+    }
+  ],
+  "healing": [
+    {
+      "name": "Advanced Medkits",
+      "type": "Healing",
+      "weight": "2",
+      "heal":  "20"
+    },
+    {
+      "name": "Medkits",
+      "type": "Healing",
+      "weight": "1",
+      "heal": "5"
+    }
+  ],
+  "Equipment": [
+    {
+      "name": "Leather Jackets",
+      "type": "Equipment",
+      "weight":"2",
+      "durability": "10"
+    },
+    {
+      "name": "Leather Pants",
+      "type": "Equipment",
+      "weight":"2",
+      "durability": "10"
+    },
+    {
+      "name": "Leather Cap",
+      "type": "Equipment",
+      "weight":"2",
+      "durability": "10"
+    },
+    {
+      "name": "Leather Boots",
+      "type": "Equipment",
+      "weight":"2",
+      "durability": "10"
+    },
+    {
+      "name": "Tactical Helmets",
+      "type": "Equipment",
+      "weight":"5",
+      "durability": "30"
+    },
+    {
+      "name": "Tactical Pants",
+      "type": "Equipment",
+      "weight":"5",
+      "durability": "30"
+    },
+    {
+      "name": "Tactical West",
+      "type": "Equipment",
+      "weight":"5",
+      "durability": "30"
+    },
+    {
+      "name": "Tactical Boots",
+      "type": "Equipment",
+      "weight":"5",
+      "durability": "30"
+    }
+  ]
+}

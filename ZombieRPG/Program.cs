@@ -36,27 +36,8 @@ namespace ZombieRPG
             {
                 if (Console.KeyAvailable)
                 {
-                    var command = Console.ReadKey().Key;
-                    player.oPos = player.Pos;
-
-                    switch (command)
-                    {
-                        case ConsoleKey.DownArrow:
-                            if (player.Pos[1] < Console.WindowHeight - 1) player.Pos[1]++;
-                            break;
-                        case ConsoleKey.UpArrow:
-                            if (player.Pos[1] > 0) player.Pos[1]--;
-                            break;
-                        case ConsoleKey.LeftArrow:
-                            if (player.Pos[0] > 0) player.Pos[0]--;
-                            break;
-                        case ConsoleKey.RightArrow:
-                            if (player.Pos[0] < Console.WindowWidth - 1) player.Pos[0]++;
-                            break;
-                    }
+                    player.Move(player);
                 }
-                player.DeRender();
-                player.Render();
                 Thread.Sleep(1);
             }
         }
